@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+	shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Hierarchical Text Input</title>
+    <link rel="stylesheet" href="css/dragula.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="libraries/jquery-3.1.1.min.js"></script>
+    <script src="libraries/riot+compiler.min.js"></script>
+    <script src="libraries/moment.js"></script>
+    <script src="libraries/dragula.min.js"></script>
+    <script src="libraries/underscore-min.js"></script>
+</head>
+
+<body ontouchstart="">
+    <app></app>
+    <script>
+        // Define a helper
+        Array.prototype.insert = function (index, item) {
+                this.splice(index, 0, item);
+            };
+
+       $(function () {
+        //    Init app
+            riot.mount('app') 
+        });
+    </script>
+    
+    <script src="built/node.js"></script>
+    <script type="riot/tag" src="src/components/app.tag"></script>
+    <script type="riot/tag" src="src/components/item.tag"></script>
+</body>
+
+</html>
