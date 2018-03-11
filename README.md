@@ -4,6 +4,8 @@ This web app provides a minimal interface for hierarchical text input. The simpl
 
 The app uses [RiotJS](http://riotjs.com/) framework for componentizing the views. The model is written in Typescript.
 
+![screenshot](./example.png) 
+
 ## View components (src/components):
 - The top-most view is the *app* view contained in `app.tag`. This view contains a collection of *items*. Each item represents a line in which the user can type. The code in app.tag initializes the first item and handles the keyboard events up, down, tab, shif-tab, and enter. The enter key creates a new item in the next line.
 - The item view in the file `item.tag` contains a text input. It is associated with one `Node` object and handles the tab, shift-tab operations when triggered by the app. It also handles the *focus* event when the text box is clicked or from the up/down keyboard event handlers in the app.tag.

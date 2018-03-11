@@ -73,9 +73,10 @@
                 
             }
             if (keyCode == 8) { // backspace when title is ""
-                e.preventDefault();
+                
                 let currentNode = self.selectedNodeView.node
                 if (currentNode.title === ""){
+                    e.preventDefault();
                     // focus on the previous node
                     self.getPrevInFlatList(self.selectedNodeView.node).trigger('focus')
                     // delete current node from parent
