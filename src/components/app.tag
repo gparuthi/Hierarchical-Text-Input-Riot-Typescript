@@ -72,6 +72,17 @@
                 self.getNextInFlatList(self.selectedNodeView.node).trigger('focus')                
                 
             }
+            if (keyCode == 8) { // backspace when title is ""
+                e.preventDefault();
+                let currentNode = self.selectedNodeView.node
+                if (currentNode.title === ""){
+                    // focus on the previous node
+                    self.getPrevInFlatList(self.selectedNodeView.node).trigger('focus')
+                    // delete current node from parent
+                    currentNode.parent.removeChild(currentNode)
+                    app.update()
+                }
+            }
         }
 
         getNextInFlatList(node) {
