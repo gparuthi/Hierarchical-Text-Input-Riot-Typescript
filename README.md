@@ -11,7 +11,7 @@ The app uses [RiotJS](http://riotjs.com/) framework for componentizing the views
 - The item view in the file `item.tag` contains a text input. It is associated with one `Node` object and handles the tab, shift-tab operations when triggered by the app. It also handles the *focus* event when the text box is clicked or from the up/down keyboard event handlers in the app.tag.
 
 ## Model (src/store)
-- The datastore is contained in the store/model.js. It contains the class Node. Each object is composed of a title and a list of child Node objects. The class provides methods allowing basic operations to add child, remove child, retrieve siblings, and retrieve the index of a child. The method `getOrderedFlatNodeList` is called to generate the flat list of nodes used to populate the items list in `app.tag`.
+- It contains the class Node. Each object is composed of a title and a list of child Node objects. The class provides methods allowing basic operations to add child, remove child, retrieve siblings, and retrieve the index of a child. The method `getOrderedFlatNodeList` is called to generate the flat list of nodes used to populate the items list in `app.tag`.
 
 # To run
 1. Run this command in the directory
